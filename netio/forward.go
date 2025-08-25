@@ -25,6 +25,7 @@ func CipherCopy(dst Ctx, src Ctx) (int64, error) {
 
 			if nw > 0 {
 				logger.Info("<== [%d bytes] ==> ", nw)
+				logger.File(buffer[:nr])
 				written += int64(nw)
 			}
 			if ew != nil {
@@ -100,6 +101,7 @@ func ForwardUDP(ctxA Ctx, ctxB Ctx) {
 				nw, _ := ctxA.EncryptWrite(buffer[:nr])
 				if nw > 0 {
 					logger.Info("<== [%d bytes] ==>", nw)
+					logger.File(buffer[:nr])
 				}
 			}
 		}

@@ -115,6 +115,8 @@ func ParseCli(args []string) (
 				return
 			}
 			ptr++
+		case "-b", "--base64":
+			BASE64 = true
 		case "-v", "--verbose":
 			VERBOSE = true
 		case "-h", "--help":

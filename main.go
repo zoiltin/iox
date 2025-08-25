@@ -12,8 +12,7 @@ const VERSION = "0.4"
 func Usage() {
 	fmt.Printf(
 		"iox v%v\n"+
-			"    Access intranet easily (https://github.com/eddieivan01/iox)\n\n"+
-			"Usage: iox fwd/proxy [-l [*][HOST:]PORT] [-r [*]HOST:PORT] [-k HEX] [-t TIMEOUT] [-u] [-h] [-v]\n\n"+
+			"Usage: iox fwd/proxy [-l [*][HOST:]PORT] [-r [*]HOST:PORT] [-k HEX] [-t TIMEOUT] [-u] [-h] [-b] [-v]\n\n"+
 			"Options:\n"+
 			"  -l [*][HOST:]PORT\n"+
 			"      address to listen on. `*` means encrypted socket\n"+
@@ -27,6 +26,8 @@ func Usage() {
 			"      set connection timeout(millisecond), default is 5000\n"+
 			"  -v\n"+
 			"      enable log output\n"+
+			"  -b\n"+
+			"      enable base64 encode\n"+
 			"  -h\n"+
 			"      print usage then exit\n", VERSION,
 	)
